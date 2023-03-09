@@ -8,9 +8,8 @@ const btnCreate = document.querySelector('button');
 
 function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
+    const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
-      const shouldResolve = Math.random() > 0.3;
-
       if (shouldResolve) {
         resolve({ position, delay });
       } else {
